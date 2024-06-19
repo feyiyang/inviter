@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 1rem;
+}
+.wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.wrapper .section {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
