@@ -7,8 +7,9 @@ $(function () {
 
   setTimeout(() => {
     $('.sec_1').addClass('animed')
-  })
+  }, 20)
 
+  initsec3()
   
   $.scrollify({
     section : ".section",
@@ -50,3 +51,8 @@ $(function () {
     afterRender:function() {}
   });
 })
+
+function initsec3 () {
+  const wid = $('.sec_3 .cent div').width()
+  $('.sec_3 .cent img').height(wid * 1.78)
+}

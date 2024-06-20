@@ -1,15 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'xyjxs';
+  src: url('imgs/xyjxs.woff');
+}
+@font-face {
+  font-family: 'librebaskerville';
+  src: url('imgs/librebaskerville.woff');
+}
+@font-face {
+  font-family: 'feihuasong';
+  src: url('imgs/feihuasong.woff');
 }
 html,
 body {
   height: 100%;
 }
 body {
-  font-family: Arial, "PingFangSC-Regular", "STHeitiSC-Light", Helvetica;
+  font-family: 'librebaskerville', 'feihuasong';
   font-size: 14px;
   line-height: 1;
+}
+em {
+  font-style: normal;
 }
 .wrapper {
   max-width: 640px;
@@ -22,12 +33,13 @@ body {
   background: url(imgs/20220326-183044-79cf.png) repeat-y;
   color: #eed9aa;
 }
+.animate__animated {
+  animation-timing-function: linear;
+}
 .sec_1 {
   display: flex;
   flex-flow: column;
   align-items: center;
-  font-family: Arial, SimSun, Sans-Serif;
-  font-weight: 400;
 }
 .sec_1 .top_img {
   width: 88%;
@@ -45,46 +57,50 @@ body {
 }
 .sec_1 .p1 {
   margin: 2.6vh 0 1.8vh;
-  transform: scale(0.8);
+  transform: scale(0.6);
 }
 .sec_1 .p2 {
   transform: scale(0.8);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .sec_1 .p3 {
   margin: 1vh 0 2vh;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 .sec_1 .p4,
 .sec_1 .p5 {
   margin: 0.6vh 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .sec_1 .p4 {
   transform: translateX(-1000px) scale(0.01);
 }
 .sec_1 .p5 {
-  margin-bottom: 2.8vh;
+  padding-bottom: 8vh;
   transform: translateX(1000px) scale(0.01);
 }
 .sec_1 .cent {
   width: 100%;
-  min-height: 20rem;
+  min-height: 16rem;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2vh 0 2.6vh;
+  margin: 4vh 0 5vh;
   background: url(imgs/cover.png) no-repeat center;
   background-size: contain;
   color: #000;
-  font-family: "SourceHanSerifSC-Light-subset15", "Source Han Serif SC Light-subset15", "SourceHanSerifSC-Light", "Source Han Serif SC Light", Arial, SimSun, Sans-Serif;
 }
 .sec_1 .cent p {
   width: 1em;
-  font-size: 3.2rem;
+  height: calc(80% - 4vh);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 1vh 0;
+  font-size: 6vh;
   font-weight: 400;
-  line-height: 1.4;
+  font-style: normal;
 }
 .sec_1.animed .top_img img {
   transform: translateY(-40%);
@@ -97,7 +113,7 @@ body {
 }
 .sec_1.animed .p1,
 .sec_1.animed .p2 {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 .sec_1.animed .p3 {
   transition-delay: 3s;
@@ -111,7 +127,6 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  --animation-timing-function: linear;
 }
 .sec_2 .pic1 {
   max-width: 80%;
@@ -119,17 +134,14 @@ body {
   min-height: 12rem;
   height: 34vh;
   margin: 6vh 2rem 4vh;
-  padding: 0 10px;
   border: 2px #eed9aa solid;
   overflow: hidden;
 }
 .sec_2 .pic1 img {
   width: 100%;
   height: 100%;
-  object-position: -22%;
+  object-position: -32% 40%;
   object-fit: cover;
-  border-top: 5px #a10505 solid;
-  border-bottom: 5px #a10505 solid;
 }
 .sec_2 .p1 {
   font-size: 14px;
@@ -145,9 +157,8 @@ body {
   flex-grow: 1;
   font-size: 16px;
   text-align: center;
-  line-height: 1.6;
-  animation-delay: 1.6s;
-  animation-duration: 2.5s;
+  line-height: 1.4;
+  animation-delay: 1.2s;
 }
 .sec_2 .pic2 {
   height: 18px;
@@ -161,20 +172,29 @@ body {
   width: 100%;
   transform: rotate(180deg);
 }
+.bottom_fade {
+  height: 26px;
+  padding-top: 1rem;
+  overflow: hidden;
+}
+.bottom_fade img {
+  width: 100%;
+  transform: rotate(180deg);
+}
 .sec_3 {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .sec_3 .p1 {
-  margin-top: 2vh;
-  font-size: 2rem;
+  margin-top: 3vh;
+  font-size: 1.4rem;
 }
 .sec_3 .top {
   width: 80%;
-  min-height: 20rem;
-  height: 44vh;
-  margin-top: 6vh;
+  min-height: 16rem;
+  height: 40vh;
+  margin-top: 4vh;
 }
 .sec_3 .top img {
   width: 100%;
@@ -196,10 +216,89 @@ body {
   width: 100%;
   height: 100%;
   border: 1px #eed9aa solid;
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 .sec_3 .cent .pic2 {
+  max-height: 38vh;
   margin-right: 1rem;
+  overflow: hidden;
+}
+.sec_3 .cent .pic2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -1rem;
+}
+.sec_3 .cent .pic3 {
+  max-height: 38vh;
+  overflow: hidden;
+}
+.sec_3 .cent .pic3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: calc(100% + 1rem) 0;
+}
+.sec_4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.sec_4 .animate__animated {
+  animation-duration: 3s;
+}
+.sec_4 .p1 {
+  margin-top: 6vh;
+}
+.sec_4 .p2 {
+  margin-top: 2vh;
+  font-size: 1.4rem;
+}
+.sec_4 .p3 {
+  margin-top: 8vh;
+  font-size: 1.4rem;
+}
+.sec_4 .pic1 {
+  width: 80%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sec_4 .pic1 .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 98%;
+  height: 98%;
+  object-fit: contain;
+}
+.sec_4 .pic1 .inv {
+  width: 72%;
+  height: 72%;
+  object-fit: cover;
+  object-position: center 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sec_4 .p4 {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.sec_4 .pic2 {
+  height: 18px;
+}
+.sec_4 .pic3 {
+  height: 26px;
+  padding-top: 1rem;
+  overflow: hidden;
+}
+.sec_4 .pic3 img {
+  width: 100%;
+  transform: rotate(180deg);
 }
 .sec_5 {
   display: flex;
@@ -207,19 +306,37 @@ body {
   align-items: center;
 }
 .sec_5 .pic1 {
-  width: 20rem;
-  height: 20rem;
+  position: relative;
+  width: 28vh;
+  height: 28vh;
+  padding: 1rem;
+  margin-top: 6vh;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .sec_5 .pic1 img {
   width: 100%;
   height: 100%;
 }
+.sec_5 .pic1 .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sec_5 .pic1 .inv {
+  object-fit: cover;
+}
 .sec_5 > p {
-  font-size: 2rem;
+  margin: 1vh 0;
+  flex-grow: 1;
+  font-size: 1.4rem;
 }
 .sec_5 .p1 {
   margin-top: 4vh;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+.sec_5 .p2 {
+  animation-delay: 1.2s;
 }
 .sec_5 .butterfly {
   width: 2rem;
@@ -234,18 +351,18 @@ body {
 }
 .sec_6 .p1 {
   margin-top: 4vh;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .sec_6 iframe {
-  width: 90%;
+  width: 80%;
   min-height: 12rem;
-  height: 66vh;
+  height: 52vh;
   margin: 4vh 0 6vh;
 }
 .sec_6 .p3 {
   margin: 14px 0 4vh;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 .audio {
   display: none;

@@ -1,15 +1,27 @@
-* {
-  margin: 0;
-  padding: 0;
+
+@font-face {
+  font-family: 'xyjxs';
+  src: url('./imgs/xyjxs.woff');
+}
+@font-face {
+  font-family: 'librebaskerville';
+  src: url('./imgs/librebaskerville.woff');
+}
+@font-face {
+  font-family: 'feihuasong';
+  src: url('./imgs/feihuasong.woff');
 }
 
 html, body {
   height: 100%;
 }
 body {
-  font-family: Arial,"PingFangSC-Regular","STHeitiSC-Light",Helvetica;
+  font-family: 'librebaskerville', 'feihuasong', ;
   font-size: 14px;
   line-height: 1;
+}
+em {
+  font-style: normal;
 }
 .wrapper {
   max-width: 640px;
@@ -24,12 +36,14 @@ body {
   color: #eed9aa;
 }
 
+.animate__animated {
+  animation-timing-function: linear;
+}
+
 .sec_1 {
   display: flex;
   flex-flow: column;
   align-items: center;
-  font-family: Arial,SimSun,Sans-Serif;
-  font-weight: 400;
   .top_img {
     width: 88%;
     margin: 0 auto;
@@ -46,44 +60,48 @@ body {
   }
   .p1 {
     margin: 2.6vh 0 1.8vh;
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   .p2 {
     transform: scale(0.8);
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .p3 {
     margin: 1vh 0 2vh;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .p4,.p5 {
     margin: 0.6vh 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .p4 {
     transform: translateX(-1000px) scale(0.01);
   }
   .p5 {
-    margin-bottom: 2.8vh;
+    padding-bottom: 8vh;
     transform: translateX(1000px) scale(0.01);
   }
   .cent {
     width: 100%;
-    min-height: 20rem;
+    min-height: 16rem;
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2vh 0 2.6vh;
+    margin: 4vh 0 5vh;
     background: url(./imgs/cover.png) no-repeat center;
     background-size: contain;
     color: #000;
-    font-family: "SourceHanSerifSC-Light-subset15", "Source Han Serif SC Light-subset15", "SourceHanSerifSC-Light", "Source Han Serif SC Light", Arial, SimSun, Sans-Serif;
     p {
       width: 1em;
-      font-size: 3.2rem;
+      height: calc(80% - 4vh);
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      padding: 1vh 0;
+      font-size: 6vh;
       font-weight: 400;
-      line-height: 1.4;
+      font-style: normal;
     }
   }
   &.animed {
@@ -97,7 +115,7 @@ body {
       transition: all 0.8s linear 2s;
     }
     .p1,.p2 {
-      transform: scale(1.2);
+      transform: scale(1);
     }
     .p3 {
       transition-delay: 3s;
@@ -112,24 +130,19 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  --animation-timing-function: linear;
   .pic1 {
     max-width: 80%;
     width: 28rem;
     min-height: 12rem;
     height: 34vh;
     margin: 6vh 2rem 4vh;
-    padding: 0 10px;
     border: 2px #eed9aa solid;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
-      // transform: translateY(-22%);
-      object-position: -22%;
+      object-position: -32% 40%;
       object-fit: cover;
-      border-top: 5px #a10505 solid;
-      border-bottom: 5px #a10505 solid;
     }
   }
   .p1 {
@@ -146,9 +159,8 @@ body {
     flex-grow: 1;
     font-size: 16px;
     text-align: center;
-    line-height: 1.6;
-    animation-delay: 1.6s;
-    animation-duration: 2.5s;
+    line-height: 1.4;
+    animation-delay: 1.2s;
   }
   .pic2 {
     height: 18px;
@@ -163,20 +175,29 @@ body {
     }
   }
 }
+.bottom_fade {
+  height: 26px;
+  padding-top: 1rem;
+  overflow: hidden;
+  img {
+    width: 100%;
+    transform: rotate(180deg);
+  }
+}
 
 .sec_3 {
   display: flex;
   flex-flow: column;
   align-items: center;
   .p1 {
-    margin-top: 2vh;
-    font-size: 2rem;
+    margin-top: 3vh;
+    font-size: 1.4rem;
   }
   .top {
     width: 80%;
-    min-height: 20rem;
-    height: 44vh;
-    margin-top: 6vh;
+    min-height: 16rem;
+    height: 40vh;
+    margin-top: 4vh;
     img {
       width: 100%;
       height: 100%;
@@ -196,14 +217,93 @@ body {
         width: 100%;
         height: 100%;
         border: 1px #eed9aa solid;
-        animation-delay: 0.6s;
+        animation-delay: 0.8s;
       }
       
     }
     .pic2 {
+      max-height: 38vh;
       margin-right: 1rem;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: -1rem;
+      }
     }
-    .pic3 {}
+    .pic3 {
+      max-height: 38vh;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: calc(100% + 1rem) 0;
+      }
+    }
+  }
+}
+
+.sec_4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .animate__animated {
+    animation-duration: 3s;
+  }
+  .p1 {
+    margin-top: 6vh;
+  }
+  .p2 {
+    margin-top: 2vh;
+    font-size: 1.4rem;
+  }
+  .p3 {
+    margin-top: 8vh;
+    font-size: 1.4rem;
+  }
+  .pic1 {
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .cover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 98%;
+      height: 98%;
+      object-fit: contain;
+    }
+    .inv {
+      width: 72%;
+      height: 72%;
+      object-fit: cover;
+      object-position: center 0;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  .p4 {
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .pic2 {
+    height: 18px;
+  }
+  .pic3 {
+    height: 26px;
+    padding-top: 1rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -212,19 +312,37 @@ body {
   flex-flow: column;
   align-items: center;
   .pic1 {
-    width: 20rem;
-    height: 20rem;
+    position: relative;
+    width: 28vh;
+    height: 28vh;
+    padding: 1rem;
+    margin-top: 6vh;
+    border-radius: 50%;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
     }
+    .cover {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .inv {
+      object-fit: cover;
+    }
   }
   > p {
-    font-size: 2rem;
+    margin: 1vh 0;
+    flex-grow: 1;
+    font-size: 1.4rem;
   }
   .p1 {
     margin-top: 4vh;
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .p2 {
+    animation-delay: 1.2s;
   }
   .butterfly {
     width: 2rem;
@@ -240,18 +358,18 @@ body {
   justify-content: space-around;
   .p1 {
     margin-top: 4vh;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   iframe {
-    width: 90%;
+    width: 80%;
     min-height: 12rem;
-    height: 66vh;
+    height: 52vh;
     margin: 4vh 0 6vh;
   }
   .p3 {
     margin: 14px 0 4vh;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 }
 
