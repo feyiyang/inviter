@@ -173,10 +173,11 @@ body {
   min-height: 20rem;
   height: 44vh;
   margin-top: 6vh;
-  border: 1px #eed9aa solid;
 }
 .sec_3 .top img {
   width: 100%;
+  height: 100%;
+  border: 1px #eed9aa solid;
   object-fit: cover;
 }
 .sec_3 .cent {
@@ -188,7 +189,12 @@ body {
   width: 48%;
   min-height: 16rem;
   height: 36vh;
+}
+.sec_3 .cent > div img {
+  width: 100%;
+  height: 100%;
   border: 1px #eed9aa solid;
+  animation-delay: 0.9s;
 }
 .sec_3 .cent .pic2 {
   margin-right: 1rem;
@@ -215,8 +221,13 @@ body {
 .sec_5 iframe {
   width: 90%;
   min-height: 12rem;
-  height: 72vh;
+  height: 66vh;
   margin: 4vh 0 6vh;
+}
+.sec_5 .p3 {
+  margin: 14px 0 4vh;
+  text-align: center;
+  line-height: 1.4;
 }
 .audio {
   display: none;
