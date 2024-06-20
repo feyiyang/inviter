@@ -43,40 +43,39 @@ body {
   opacity: 0.1;
 }
 .sec_1 .p1 {
-  margin: 3rem 0 2rem;
+  margin: 2.6vh 0 1.8vh;
   transform: scale(0.8);
-  font-size: 1rem;
 }
 .sec_1 .p2 {
   transform: scale(0.8);
   font-size: 2rem;
 }
 .sec_1 .p3 {
-  margin: 1rem 0 2.6rem;
+  margin: 1vh 0 2vh;
   font-size: 1.6rem;
 }
 .sec_1 .p4,
 .sec_1 .p5 {
-  margin: 0.6rem 0;
+  margin: 0.6vh 0;
   font-size: 1.4rem;
 }
 .sec_1 .p4 {
   transform: translateX(-1000px) scale(0.01);
 }
 .sec_1 .p5 {
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.8vh;
   transform: translateX(1000px) scale(0.01);
 }
 .sec_1 .cent {
   width: 100%;
-  min-height: 24rem;
+  min-height: 20rem;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2.8rem 0 3.6rem;
+  margin: 2vh 0 2.6vh;
   background: url(imgs/cover.png) no-repeat center;
-  background-size: auto 24rem;
+  background-size: contain;
   color: #000;
   font-family: "SourceHanSerifSC-Light-subset15", "Source Han Serif SC Light-subset15", "SourceHanSerifSC-Light", "Source Han Serif SC Light", Arial, SimSun, Sans-Serif;
 }
@@ -175,6 +174,10 @@ body {
   height: 44vh;
   margin-top: 6vh;
   border: 1px #eed9aa solid;
+}
+.sec_3 .top img {
+  width: 100%;
+  object-fit: cover;
 }
 .sec_3 .cent {
   display: flex;
